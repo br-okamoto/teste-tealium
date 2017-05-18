@@ -1,7 +1,7 @@
 function testeTealium(){
-	var ctg = "Device Ready";
-	var act = "Device Ready";
-	var lbl = "Device Ready";
+	var ctg = "testeTealium";
+	var act = "testeTealium";
+	var lbl = "testeTealium";
 	tealium.track("link", {"event_category" : ctg, "event_action" : act, "event_label" : lbl}, "tealium");
 }
 
@@ -18,3 +18,8 @@ document.addEventListener("deviceready", function() {
 	//utag.link({"event_category" : ctg, "event_action" : act, "event_label" : lbl});
 	tealium.track("link", {"event_category" : ctg, "event_action" : act, "event_label" : lbl}, "tealium");
 }, false);
+
+var ctg = "onload";
+var act = "onload";
+var lbl = "onload";
+tealium.track("link", {"event_category" : ctg, "event_action" : act, "event_label" : lbl}, "tealium");
