@@ -72,11 +72,13 @@ function sendEvent(ctg, act, lbl){
         '\neventLabel: ' + lbl,
         '\nproposta_id: ' + proposta_id
     );
-    utag.link({
-        event_category:ctg,
-        event_action:act,
-        event_label:lbl,
-        proposta_id:proposta_id
+    tealium.track({
+		'link', {
+			event_category:ctg,
+			event_action:act,
+			event_label:lbl,
+			proposta_id:proposta_id },
+		'tealium'
     });
     //ga('send', 'event', ctg, act, lbl);
 }
